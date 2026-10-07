@@ -249,22 +249,21 @@ body{padding:0}
 /* ===== Refined theme (matches the Latin site's css/theme.css, Oct 2026): calmer surfaces, hairline borders,
    tinted "on" buttons, serif page title. Placed last so it overrides the v2 values above. ===== */
 :root{
-  --bg:#F7F6F3; --surface:#FFFFFF; --surface2:#F0EEEA; --ink:#1C1B1A; --muted:#4A4743; --faint:#5C5852; --rule:#E3E0DA; --rule2:#B9B4AB;
+  --bg:#F7F6F3; --surface:#FFFFFF; --surface2:#EFEDE8; --ink:#111111; --muted:#3A3733; --faint:#4F4B45; --rule:#CBC6BC; --rule2:#8A847A;
   --accent:#8E2A1C; --accent-strong:#6E1F14; --accent-ink:#FFFFFF; --accent-soft:#F8E8E4;
   --head:"Source Serif 4",Georgia,serif;
   --shadow:0 1px 2px rgba(40,30,20,.05),0 4px 16px rgba(40,30,20,.05);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#141312; --surface:#1D1C1A; --surface2:#292725; --ink:#F4F2EE; --muted:#D3CFC8; --faint:#B9B4AC; --rule:#34312E; --rule2:#6E6962;
+    --bg:#141312; --surface:#1D1C1A; --surface2:#292725; --ink:#F7F7F5; --muted:#DAD7D1; --faint:#BDB9B1; --rule:#3E3B37; --rule2:#7A7570;
     --accent:#FF9F8C; --accent-strong:#FFB7A8; --accent-ink:#141312; --accent-soft:#3A201B;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.25)}
 }
 :root[data-theme="dark"]{
-  --bg:#141312; --surface:#1D1C1A; --surface2:#292725; --ink:#F4F2EE; --muted:#D3CFC8; --faint:#B9B4AC; --rule:#34312E; --rule2:#6E6962;
+  --bg:#141312; --surface:#1D1C1A; --surface2:#292725; --ink:#F7F7F5; --muted:#DAD7D1; --faint:#BDB9B1; --rule:#3E3B37; --rule2:#7A7570;
   --accent:#FF9F8C; --accent-strong:#FFB7A8; --accent-ink:#141312; --accent-soft:#3A201B;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.25)}
-body{-webkit-font-smoothing:antialiased}
 h1{font-family:var(--head);letter-spacing:-.005em}
 .results,article,.search input{border-radius:14px}
 .chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-strong);border-color:var(--accent);box-shadow:inset 0 0 0 .5px var(--accent)}
