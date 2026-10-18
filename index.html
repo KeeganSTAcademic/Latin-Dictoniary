@@ -269,6 +269,41 @@ h1{font-family:var(--head);letter-spacing:-.005em}
 .chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-strong);border-color:var(--accent);box-shadow:inset 0 0 0 .5px var(--accent)}
 .chip.mode[aria-pressed="true"]::before{background:var(--accent)}
 /* ===== end Refined ===== */
+
+/* ===== Crisp / Garnet (matches the Latin site's css/theme.css, Oct 2026): white pages, garnet accent, grey tinted boxes, firmer outlines, light grey sidebar ===== */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface2:#F0F1F3; --ink:#0A0A0B; --muted:#2A2B2E; --faint:#45474C; --rule:#B9BDC5; --rule2:#6B6F77;
+  --accent:#99221B; --accent-strong:#6F1812; --accent-ink:#FFFFFF; --accent-soft:#F8E5E2; --tint:#F3F4F6; --sb-bg:#F6F7F8;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--tint:#262524;--sb-bg:#141312}}
+:root[data-theme="dark"]{--tint:#262524;--sb-bg:#141312}
+.side{background:var(--sb-bg);border-right:1.5px solid var(--rule)}
+.results,.mkeys,.seg,.search input{border-width:1.5px;border-color:var(--rule2)}
+.search input:focus{border-color:var(--accent)}
+.results .count{border-bottom-width:1.5px}
+.chip{border-color:var(--rule2)}
+.seg .chip,.mkeys button{border-left-color:var(--rule2)}
+.results button[aria-current="true"]{background:var(--accent-soft);border-left:4px solid var(--accent);color:var(--accent-strong)}
+.formnote{background:var(--tint);border:1px solid var(--rule);border-left:5px solid var(--accent);border-radius:10px;padding:10px 16px}
+.app > article .tools{border-bottom:1.5px solid var(--rule)}
+.entry .s0 > b:first-child,.focus .fhead b{font-family:var(--head)}
+.hint kbd{border-color:var(--rule2)}
+footer{border-top-width:1.5px}
+/* dark charcoal sidebar: remap the tokens inside it so every child picks up light-on-dark */
+.side,:root[data-theme="light"] .side{
+  color-scheme:dark; background:#202124; border-right:1.5px solid #101113;
+  --bg:#202124; --surface:#2C2D31; --surface2:#3A3B41; --ink:#F4F4F5; --muted:#D6D7DA; --faint:#B9BBC0;
+  --rule:#4A4C53; --rule2:#80838B; --accent:#FF9F8C; --accent-strong:#FFC2B6; --accent-ink:#202124; --accent-soft:#4A2723;
+  --mark:#FFC2B6; --shadow:none;
+}
+.side{color:var(--ink)}
+.side h1,.side .hw{color:var(--ink)}
+.side .results{background:#2C2D31;border-color:#5A5D65}
+.side .results .count{background:#2C2D31}
+.side .search input,.side .mkeys,.side .chip{border-color:#80838B}
+.side .results button[aria-current="true"]{color:var(--ink)}
+/* ===== end Crisp / Garnet ===== */
 </style>
 
 <div class="app">
